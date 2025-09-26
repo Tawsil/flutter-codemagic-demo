@@ -8,9 +8,9 @@ workflows:
       - name: Get dependencies
         script: flutter pub get
       - name: Build release APK (universal)
-        script: flutter build apk --release --no-shrink
+        script: flutter build apk --release --no-shrink --target-platform android-arm64
     artifacts:
-      - build/**/outputs/**/*.apk
+      - build/**/outputs/flutter-apk/app-release.apk
     publishing:
       email:
         recipients:
