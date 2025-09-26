@@ -7,11 +7,11 @@ workflows:
     scripts:
       - name: Get dependencies
         script: flutter pub get
-      - name: Build release APK
-        script: flutter build apk --release
+      - name: Build release APK (universal)
+        script: flutter build apk --release --no-shrink
     artifacts:
       - build/**/outputs/**/*.apk
     publishing:
       email:
         recipients:
-          - your-email@example.com  # ← غيّر هذا إلى بريدك
+          - your-email@example.com  # ← غيّر هذا إلى بريدك الحقيقي
